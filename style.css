@@ -10,7 +10,40 @@
     justify-content: center;
 }
 
+.display {
+    display: flex;
+    flex-direction: column;
+    width: 31.3vh;
+    height: 8vh;
+    background-color: white;
+    margin: 0px;
+    border: solid;
+    font-size: 32px;
+    justify-content: right;
+    align-items: center;
+}
+
+.values {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    padding: 0px 5px;
+    gap: 10px
+}
+
+
 .row {
     display: flex;
     flex-direction: row;
 }
+
+ button {
+    font-size: 20px;
+    background-color: green;
+    width: 8vh;
+    height: 8vh;
+ }
+
+ #equal {
+    width: 16vh;
+ }

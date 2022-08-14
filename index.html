@@ -11,13 +11,20 @@
 <body>
 
     <div class = "calculator">
-        <div id = "display">0</div>
+        <div class = "display">
+            <div class = "values">
+                <div class = "value" id = "one">0</div>
+                <div class = "ops" id = ops>?</div>
+                <div class = "value" id = "two">0</div>
+            </div>
+            <div class = "solution">0</div>
+        </div>
 
         <div class = "row">
             <button id = "ac">AC</button>
             <button id = "c">C</button>
             <button class = "operator" value = "%">%</button>
-            <button class = "operator" value = "/">/</button>
+            <button class = "operator" value = "÷">/</button>
         </div>
 
         <div class = "row">
@@ -38,13 +45,13 @@
             <button class = "num-key" value = "7">7</button>
             <button class = "num-key" value = "8">8</button>
             <button class = "num-key" value = "9">9</button>
-            <button class = "operator" value = "*">x</button>
+            <button class = "operator" value = "×">x</button>
         </div>
 
         <div class = "row">
             <button class = "num-key" value = "0">0</button>
             <button id = "dot">.</button>
-            <button class = "operator" value = "=">=</button>
+            <button class = "operator" id = "equal" value = "=">=</button>
         </div>
 
 
