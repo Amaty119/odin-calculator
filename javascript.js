@@ -14,7 +14,7 @@ let solution = document.querySelector(".solution");
 //value 1 is the input, value 2 is the output
 let value1 = 0;
 let value2 = 0;
-let op = "";
+let op = "?";
 let init = 0;
 let toggle = true;
 let solve = 0;
@@ -75,23 +75,29 @@ numkey.forEach(key => {
 
 operator.forEach(key => {
     key.addEventListener("click", function handleClick(event) {
+        if(value1 != 0)toggle = false;
 
-        toggle = false;
+        if(op != "?" && toggle != true) {
+            console.log(op + ", " + value1 + ", " + value2);
 
-        console.log(op + ", " + value1 + ", " + value2);
-        if(key.value == "=") {
-            solve = operate(op, value1, value2);
+            if(key.value == "=" && value2 != 0) {
+                solve = operate(op, value1, value2);
+                disV1.textContent = value1;
+                disV2.textContent = value2;
+                value1 = solve;
+                value2 = 0;
+            }
+            op = key.value;
+            if(key.value == "=") op = "?";
+
+            
             disV1.textContent = value1;
             disV2.textContent = value2;
-            value1 = solve;
-            value2 = 0;
+        
+            solution.textContent = solve;
         }
         op = key.value;
-        disV1.textContent = value1;
-            disV2.textContent = value2;
-        
-
-        solution.textContent = solve;
-        if(key.value != "=") opV.textContent = op;
+        if(key.value == "=") op = "?";
+        opV.textContent = op;
     });
 });
