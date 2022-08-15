@@ -3,15 +3,15 @@ const disV1 = document.querySelector("#one");
 const disV2 = document.querySelector("#two");
 const disV3 = document.querySelector(".three");
 const opV = document.querySelector("#ops");
-let allClear = document.querySelector("#ac");
-const clear = document.querySelector("#c");
+let allClear = document.querySelector(".ac");
+const clear = document.querySelector(".c");
 
 let buttons = document.querySelector(".calculator");
 
 let numkey = document.querySelectorAll(".num-key");
 let operator = document.querySelectorAll(".operator");
 let equal = document.querySelector("#equal");
-let dot = document.querySelector("#dot");
+let dot = document.querySelector(".dot");
 
 
 
@@ -77,8 +77,13 @@ allClear.addEventListener("click", () => {
 });
 
 clear.addEventListener("click", () => {
-    value1 = Math.floor(parseInt(value1 / 10))
-    disV3.textContent = value1;
+    if(toggle) {
+        value1 = Math.floor(parseInt(value1 / 10));
+        disV3.textContent = value1;
+    } else {
+        value2 = Math.floor(parseInt(value2 / 10));
+        disV3.textContent = value2;
+    }
 });
 
 //Add decimal point on click

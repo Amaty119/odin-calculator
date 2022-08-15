@@ -3,38 +3,36 @@ body {
     display:flex;
     flex-direction: column;
     margin: 0px;
-    background-color: #F6F6F6;
+    background-color: #EFEFEF;
 }
 
 .title {
     text-align: center;
     padding: 4vh;
     font-size: 32px;
-    background-color: #BAD7DF;
-    color: white;
+    font-weight: bold;
 }
 
 .calculator {
+    font-size: 0;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
-    padding: 4vh;
-    gap: 1vh;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    margin-top: 7vh;
-    border: solid;
+    margin-top: 12vh;
+    box-shadow: 0px 0px 3vh grey;
     background-color: #BAD7DF;
 }
 
 .display {
     display: flex;
     flex-direction: column;
-    width: 32.5vh;
+    width: 32vh;
     height: 8vh;
     background-color: white;
     margin: 0px;
-    border: solid;
-    font-size: 32px;
+    font-size: 20px;
     justify-content: right;
     align-items: center;
 }
@@ -44,11 +42,6 @@ body {
     margin-left: auto;
     padding: 0px 5px;
     gap: 10px;
-    font-size: 20px;
-}
-
-.three {
-    font-size: 28px;
 }
 
 #one {
@@ -56,33 +49,40 @@ body {
 }
 
 .three {
+    font-size: 28px;
     display: flex;
     margin-left: auto;
     padding: 0px 5px;
     gap: 10px
 }
 
-
-.row {
-    gap: 5px;
-}
-
-.rowLast {
-
-    gap: 5px;
-}
-
  button {
     font-size: 20px;
-    background-color: #FFE2E2;
-    border-radius: 25px;
+    background-color: white;
+    border: none;
     width: 8vh;
     height: 8vh;
+    font-weight: bold;
  }
 
- button:hover {
-    background-color: #ebcbc7;
+ .num-key:hover {
+    background-color: #ffe6f0;
  }
+
+ .operator,
+ .dot,
+ .ac,
+ .c {
+    background-color: #f4f0f5;
+ }
+
+ .operator:hover,
+ .dot:hover,
+ .ac:hover,
+ .c:hover {
+    background-color: #ecdff0;
+ }
+
 
 #equal {
     width: 16vh;
@@ -96,11 +96,10 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #99DDCC;
-    color: white;
     text-align: center;
     padding: 3vh;
     gap: 15px;
+    font-weight: bold;
   }
 
   .github {
