@@ -1,19 +1,35 @@
-.body {
+body {
+    font-family: Roboto, "sans-serif";
     display:flex;
     flex-direction: column;
+    margin: 0px;
+    background-color: #F6F6F6;
+}
+
+.title {
+    text-align: center;
+    padding: 4vh;
+    font-size: 32px;
+    background-color: #BAD7DF;
+    color: white;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: space-between;
+    padding: 4vh;
+    gap: 1vh;
+    margin: auto;
+    margin-top: 7vh;
+    border: solid;
+    background-color: #BAD7DF;
 }
 
 .display {
     display: flex;
     flex-direction: column;
-    width: 31.3vh;
+    width: 32.5vh;
     height: 8vh;
     background-color: white;
     margin: 0px;
@@ -25,7 +41,22 @@
 
 .values {
     display: flex;
-    flex-direction: row;
+    margin-left: auto;
+    padding: 0px 5px;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.three {
+    font-size: 28px;
+}
+
+#one {
+    height: 4vh;
+}
+
+.three {
+    display: flex;
     margin-left: auto;
     padding: 0px 5px;
     gap: 10px
@@ -33,17 +64,50 @@
 
 
 .row {
-    display: flex;
-    flex-direction: row;
+    gap: 5px;
+}
+
+.rowLast {
+
+    gap: 5px;
 }
 
  button {
     font-size: 20px;
-    background-color: green;
+    background-color: #FFE2E2;
+    border-radius: 25px;
     width: 8vh;
     height: 8vh;
  }
 
- #equal {
-    width: 16vh;
+ button:hover {
+    background-color: #ebcbc7;
  }
+
+#equal {
+    width: 16vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #99DDCC;
+    color: white;
+    text-align: center;
+    padding: 3vh;
+    gap: 15px;
+  }
+
+  .github {
+    height: 4vh;
+    transition: transform 1s;
+  }
+
+  .github:hover {
+    transform: rotate(1080deg);
+  }
