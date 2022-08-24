@@ -17,14 +17,14 @@ let dot = document.querySelector(".dot");
 //value 1 is the input, value 2 is the output
 let value1 = 0;
 let value2 = 0;
-let prevop;
 let op = "?";
 let init = 0;
 let toggle = true;
 let toggle2 = false;
 let solve = 0;
 let decimal = false;
-
+let equals = false;
+let firstKey = true;
 
 const add = function (a, b) {
     return a + b;
@@ -136,28 +136,36 @@ numkey.forEach(key => {
 
 operator.forEach(key => {
     key.addEventListener("click", function handleClick(event) {
-        prevop = key.value;
         disV2.textContent = "";
-        
+            
         toggle2 = false;
         if(value1 != 0) toggle = false;
 
-        if(key.value != "=") disV1.textContent = value1;
-        
-        if(op != "?" && toggle != true) {
-            if(key.value == "=" && value2 != 0) {
+
+            
+        if(op != "?" && toggle != true && value2 != 0) {
                 solve = operate(op, value1, value2);
                 disV1.textContent = value1;
                 disV2.textContent = value2 + " =";
                 value1 = solve;
                 value2 = 0;
                 toggle2 = true;
-            }
         }
         op = key.value;
-        if(key.value != "=") opV.textContent = op;
+        if(key.value != "=" && toggle != true) {
+            disV1.textContent = value1;
+            opV.textContent = op;
+            equals = false;
+        } 
+        if (key.value == "="){
+            equals = true;
+
+        }
+        if (key.value != "=") equals = false;
+
         disV3.textContent = solve;
         decimal = false;
-        console.log(value1 + " " + value2 + " " + solve);
+
+            
     });
 });
